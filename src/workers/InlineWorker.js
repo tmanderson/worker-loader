@@ -1,6 +1,6 @@
 // http://stackoverflow.com/questions/10343913/how-to-create-a-web-worker-from-a-string
 
-var URL = window.URL || window.webkitURL;
+var URL = URL || webkitURL; // `window` is not available in worker threads. The global scope, however, is
 
 module.exports = function (content, url) {
   try {
